@@ -4,154 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nine AM Foods Pvt. Ltd.</title>
+  <link rel="icon" type="image/png" href="assets/Logos/logo_utkarsh.png" />
   <meta name="description" content="Nine AM Foods — nuts, spices, vegetables & dehydrated vegetables." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
   <link href="https://fonts.googleapis.com/css2?family=Delius&family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/LandingStyle.css" />
 
-  <style>
-    :root{
-      --green-1:#4ee9dc; --green-2:#f0b068; --green-3:#dde026; --green-4:#d5e63e;
-      --ink:#0b1610; --muted:#33463a; --border:#e7efe8; --soft:#f6fff9; --orange:#ff8a00;
-      --r-lg:16px; --r-xl:24px; --shadow:0 12px 36px rgba(0,0,0,.18); --wrap:1100px;
-    }
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{height:100%;margin:0}
-    body{
-      font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;
-      color:var(--ink);
-      /* Animated layered gradient */
-      background:
-        radial-gradient(1200px 800px at 20% -10%, rgba(128, 235, 174, 0.85), transparent 65%),
-        radial-gradient(1000px 700px at 80% 0%, rgba(100, 226, 235, 0.85), transparent 60%),
-        linear-gradient(135deg, var(--green-1), var(--green-2) 35%, var(--green-3) 75%, var(--green-4));
-      background-size:200% 200%;
-      animation:bgShift 16s ease-in-out infinite;
-      scroll-behavior:smooth;
-    }
-    @keyframes bgShift{
-      0%{background-position:0% 0%, 100% 0%, 0% 0%}
-      50%{background-position:100% 100%, 0% 100%, 100% 100%}
-      100%{background-position:0% 0%, 100% 0%, 0% 0%}
-    }
-    @media (prefers-reduced-motion: reduce){ body{animation:none} }
-
-    a{text-decoration:none}
-
-    /* HERO */
-    .hero{ text-align:center; color:#fff; padding:16px 20px 20px }
-    .heroLogo{ width:220px;height:220px; }
-    .heroName{ margin:8px 0 8px;color:#083017; font:1000 4rem/1 "Alumni Sans Pinstripe",cursive; letter-spacing:.3px }
-    .heroTagline{ font:400 2.35rem/1.6 "Delius",cursive; color:#083017; margin: 0%; }
-
-    /* CONTAINER */
-    .wrap{ max-width:var(--wrap); margin:-20px auto 0; padding:0 10px }
-
-    /* CARD */
-    .card{
-      background:#fff; border:1px solid var(--border); border-radius:var(--r-lg); box-shadow:var(--shadow);
-      overflow:visible; /* critical for sticky inside */
-    }
-
-    /* STICKY NAV */
-    .cardHeader{
-      position:sticky; top:clamp(8px,1.6vw,14px); z-index:50;
-      background:rgba(246,255,249,.85);
-      -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
-      padding:10px 12px; border-bottom:1px solid var(--border); border-radius:12px;
-    }
-    .pills{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:0 }
-    .pill{
-      padding:8px 14px; border-radius:999px; font-weight:700; font-size:.95rem;
-      color:#0a3f1e; border:1px solid #cfe9d6; background:#f6fff9; transition:.2s;
-    }
-    .pill:hover{ background:#eaffef }
-    .pill.active{
-      background:#fff; border-color:#ffd9ad;
-      box-shadow:0 0 0 2px #fff, 0 0 0 4px #ff8a00; /* clean orange ring */
-    }
-
-    /* SECTIONS */
-    .section{ padding:28px 20px }
-    .section h3{ margin:0 0 14px; font:400 1.35rem/1.4 "Delius",cursive; color:var(--ink) }
-    .pane{ border:1px solid var(--border); border-radius:14px; padding:18px; background:#fff }
-
-    /* INTRO – polished */
-    .introPane{
-      background:linear-gradient(180deg,#ffffff 0%,#f7fffb 100%);
-      border-left:6px solid rgba(22,164,79,.22);
-      box-shadow:0 6px 20px rgba(0,0,0,.06);
-    }
-    .introInner{ display:grid; gap:18px }
-    @media(min-width:960px){ .introInner{ grid-template-columns:1.3fr .9fr } }
-
-    .introBody{ max-width:60ch; line-height:1.7; color:var(--muted); font-size:1rem }
-    .lead{ margin-top:2px; font-size:1.02rem }
-    .promise{ margin:.6rem 0 0; font-weight:700; color:#163d26 }
-
-    .introAside{
-      border:1px dashed #cfe9d6; border-radius:12px; padding:14px 14px 12px;
-      background:#fbfffd; color:#0f3b1e; font-size:.95rem
-    }
-    .introAside strong{ display:block; margin-bottom:6px; font-family:"Delius",cursive }
-    .introAside ul{ margin:0; padding-left:18px }
-    .introAside li{ margin:.28rem 0 }
-
-    /* CATEGORIES */
-    .category-grid{ display:flex; flex-wrap:wrap; gap:16px; justify-content:center }
-    .category-item{ flex:0 0 42%; max-width:122px; text-align:center; font-size:.9rem; color:var(--ink) }
-    @media(min-width:576px){ .category-item{ flex:0 0 25% } }
-    @media(min-width:768px){ .category-item{ flex:0 0 14% } }
-    .category-item img{
-      width:72px; height:72px; border-radius:50%; object-fit:cover; background:#f0f0f0;
-      border:1px solid #e0e0e0; transition:transform .2s, box-shadow .2s
-    }
-    .category-item:hover img{ transform:scale(1.05); box-shadow:0 6px 14px rgba(0,0,0,.08) }
-
-    /* Anchor offset for sticky header */
-    :target{ scroll-margin-top:110px }
-
-    /* CONTACT */
-    .contactCard{ max-width:var(--wrap); margin:48px auto 0; padding:0 18px }
-    .contactBox{
-      background:#ffffff; border:1.5px solid rgba(22,164,79,.16); color:#e3efe5;
-      border-radius:var(--r-xl); box-shadow:0 4px 54px rgba(22,40,30,.09); padding:38px 34px;
-    }
-    .contactGrid{ display:grid; grid-template-columns:1fr auto; gap:40px; align-items:center }
-    @media(max-width:900px){ .contactGrid{ grid-template-columns:1fr; gap:20px } }
-
-    .contactTitle{ font:800 2.2rem/1.1 "Delius",cursive; color:#0a0909; margin:0 0 8px; letter-spacing:1.1px }
-    .dot{ color:#25fa84 }
-    .accent{ height:4px; width:40px; border-radius:2px; background:linear-gradient(90deg,#16a44f 60%,rgba(22,164,79,.2)); margin:8px 0 12px }
-
-    .contactDetails{ display:grid; gap:8px; font-size:1.05rem }
-    .address{ font-weight:600; color:#030504 }
-    .contactDetails a{ color:#000000; font-weight:700; letter-spacing:.02em }
-
-    .aside{ text-align:right }
-    @media(max-width:900px){ .aside{ text-align:left } }
-    .asideTitle{ font:500 1.05rem/1.3 "Delius",cursive; color:#000000; margin-bottom:8px }
-
-    .cta{
-      display:inline-flex; align-items:center; justify-content:center;
-      min-height:44px; min-width:200px; /* ensures good weight on laptops */
-      padding:10px 28px; border-radius:24px; border:1px solid #25fa84; color:#25fa84;
-      font-weight:700; background:none; box-shadow:0 2px 12px rgba(30,215,96,.11); transition:.18s;
-    }
-    .cta:hover,.cta:focus{ background:#25fa84; color:#142318 }
-    @media(max-width:520px){ .cta{ width:100% } }
-
-    /* COPYRIGHT */
-    .copyright{ color:#01290c; text-align:center; padding:14px 0 26px; font-size:.92rem }
-  </style>
 </head>
 <body>
 
   <!-- HERO -->
   <header class="hero">
-    <img class="heroLogo" src="assets/green_logo.png" alt="Nine AM Foods logo" />
+    <img class="heroLogo" src="assets/Logos/green_logo.png" alt="Nine AM Foods logo" />
     <h1 class="heroName">NINE AM Foods Pvt. Ltd.</h1>
     <p class="heroTagline">eat better, live better</p>
   </header>
@@ -169,7 +37,8 @@
           <a class="pill" href="#dehydrated">Dehydrated</a>
         </nav>
       </div>
-
+      
+      
       <!-- INTRO -->
       <section class="section" id="intro">
         <h3>Introduction</h3>
@@ -201,53 +70,54 @@
         <h3>Nuts</h3>
         <div class="pane">
           <div class="category-grid">
-            <a class="category-item" href="#nuts"><img src="assets\Almonds.png" alt="Almonds"><div>Almonds</div></a>
-            <a class="category-item" href="#nuts"><img src="assets\Cashews.png" alt="Cashews"><div>Cashews</div></a>
-            <a class="category-item" href="#nuts"><img src="assets\raisins.png" alt="Raisins"><div>Raisins</div></a>
-            <a class="category-item" href="#nuts"><img src="assets\Almonds.png" alt="Foxnuts"><div>Foxnuts</div></a>
-            <a class="category-item" href="#nuts"><img src="assets\Almonds.png" alt="Walnuts"><div>Walnuts</div></a>
-            <a class="category-item" href="#nuts"><img src="assets\Almonds.png" alt="Pistachios"><div>Pistachios</div></a>
-            <a class="category-item" href="#nuts"><img src="assets\Almonds.png" alt="Figs"><div>Figs</div></a>
+            <a class="category-item" href="#nuts"><img src="assets\dryfruits\Almonds.png" alt="Almonds"><div>Almonds</div></a>
+            <a class="category-item" href="#nuts"><img src="assets\dryfruits\Cashews.png" alt="Cashews"><div>Cashews</div></a>
+            <a class="category-item" href="#nuts"><img src="assets\dryfruits\raisins.png" alt="Raisins"><div>Raisins</div></a>
+            <a class="category-item" href="#nuts"><img src="assets\dryfruits\Almonds.png" alt="Foxnuts"><div>Foxnuts</div></a>
+            <a class="category-item" href="#nuts"><img src="assets\dryfruits\Almonds.png" alt="Walnuts"><div>Walnuts</div></a>
+            <a class="category-item" href="#nuts"><img src="assets\dryfruits\Almonds.png" alt="Pistachios"><div>Pistachios</div></a>
+            <a class="category-item" href="#nuts"><img src="assets\dryfruits\Almonds.png" alt="Figs"><div>Figs</div></a>
           </div>
         </div>
       </section>
 
       <!-- SPICES -->
-      <section class="section" id="spices">
-        <h3>Spices</h3>
-        <div class="pane">
-          <div class="category-grid">
-            <a class="category-item" href="#spices"><img src="assets\Almonds.png" alt="Cumin"><div>Cumin</div></a>
-            <a class="category-item" href="#spices"><img src="assets\Almonds.png" alt="Coriander"><div>Coriander</div></a>
-            <a class="category-item" href="#spices"><img src="assets\Almonds.png" alt="Fennel"><div>Fennel</div></a>
-            <a class="category-item" href="#spices"><img src="assets\Almonds.png" alt="Pepper"><div>Pepper</div></a>
-            <a class="category-item" href="#spices"><img src="assets\Almonds.png" alt="Cinnamon"><div>Cinnamon</div></a>
-          </div>
-        </div>
-      </section>
+     <section class="section" id="spices">
+  <h3>Spices</h3>
+  <div class="pane">
+    <div class="category-grid">
+      <a class="category-item" href="#spices"><img src="assets\spices\seeds.jpeg" alt="Cumin"><div>Cumin</div></a>
+      <a class="category-item" href="#spices"><img src="assets\spices\multiple-seeds.jpeg" alt="Coriander"><div>Coriander</div></a>
+      <a class="category-item" href="#spices"><img src="assets\spices\/seeds.jpeg" alt="Fennel"><div>Fennel</div></a>
+      <a class="category-item" href="#spices"><img src="assets\spices\/cardemon.jpeg" alt="Cardamom"><div>Cardamom</div></a>
+      <a class="category-item" href="#spices"><img src="assets\spices\/sinemon.jpeg" alt="Cinnamon"><div>Cinnamon</div></a>
+      <a class="category-item" href="#spices"><img src="assets\spices\/mirchi.jpeg" alt="Pepper/Chilli"><div>Red Chillies</div></a>
+    </div>
+  </div>
+</section>
 
-      <!-- VEGETABLES -->
-      <section class="section" id="vegetables">
-        <h3>Vegetables</h3>
-        <div class="pane">
-          <div class="category-grid">
-            <a class="category-item" href="#vegetables"><img src="assets\Almonds.png" alt="Onion"><div>Onion</div></a>
-            <a class="category-item" href="#vegetables"><img src="assets\Almonds.png" alt="Coconut"><div>Coconut</div></a>
-            <a class="category-item" href="#vegetables"><img src="assets\Almonds.png" alt="Garlic"><div>Garlic</div></a>
-            <a class="category-item" href="#vegetables"><img src="assets\Almonds.png" alt="Green Chillies"><div>Green Chillies</div></a>
-          </div>
-        </div>
-      </section>
+<!-- VEGETABLES -->
+<section class="section" id="vegetables">
+  <h3>Vegetables</h3>
+  <div class="pane">
+    <div class="category-grid">
+      <a class="category-item" href="#vegetables"><img src="assets/onion.jpeg" alt="Onion"><div>Onion</div></a>
+      <a class="category-item" href="#vegetables"><img src="assets/coconut.jpeg" alt="Coconut"><div>Coconut</div></a>
+      <a class="category-item" href="#vegetables"><img src="assets/garlic.jpeg" alt="Garlic"><div>Garlic</div></a>
+      <a class="category-item" href="#vegetables"><img src="assets/mirchi.jpeg" alt="Green Chillies"><div>Green Chillies</div></a>
+    </div>
+  </div>
+</section>
 
       <!-- DEHYDRATED -->
       <section class="section" id="dehydrated">
         <h3>Dehydrated Vegetables</h3>
-        <div class="pane">
-          <div class="category-grid">
-            <a class="category-item" href="#dehydrated"><img src="assets\Almonds.png" alt="Powdered Onion"><div>Powdered Onion</div></a>
-            <a class="category-item" href="#dehydrated"><img src="assets\Almonds.png" alt="Powdered Garlic"><div>Powdered Garlic</div></a>
-          </div>
-        </div>
+          <div class="pane">
+    <div class="category-grid">
+      <a class="category-item" href="#dehydrated"><img src="assets/powder.jpeg" alt="Powdered Onion"><div>Powdered Onion</div></a>
+      <a class="category-item" href="#dehydrated"><img src="assets/powder.jpeg" alt="Powdered Garlic"><div>Powdered Garlic</div></a>
+    </div>
+  </div>
       </section>
     </div>
 
@@ -275,29 +145,13 @@
     </section>
   </main>
 
-  <footer class="copyright">
-    © <span id="year"></span> Nine AM Foods Pvt. Ltd. All rights reserved.
-  </footer>
+<footer class="copyright">
+  © <span id="year"></span> Nine AM Foods Pvt. Ltd. All rights reserved. | Developed by Arnease
+</footer>
 
-  <script>
-    // Active pill on scroll (works with sticky nav)
-    const pills = document.querySelectorAll('.pill');
-    const sections = document.querySelectorAll('section[id]');
-    function setActive(){
-      const y = window.scrollY + 130;
-      sections.forEach(sec=>{
-        if (sec.offsetTop <= y && sec.offsetTop + sec.offsetHeight > y){
-          pills.forEach(p=>p.classList.remove('active'));
-          const a = document.querySelector(`.pill[href="#${sec.id}"]`);
-          if (a) a.classList.add('active');
-        }
-      });
-    }
-    window.addEventListener('scroll', setActive);
-    window.addEventListener('load', ()=>{
-      setActive();
-      document.getElementById('year').textContent = new Date().getFullYear();
-    });
-  </script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/script.js"></script>
+
 </body>
 </html>
