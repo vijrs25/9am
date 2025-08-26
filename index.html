@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nine AM Foods Pvt. Ltd.</title>
+  <title >Nine AM Foods Pvt. Ltd.</title>
   <link rel="icon" type="image/png" href="assets/Logos/logo_utkarsh.png" />
   <meta name="description" content="Nine AM Foods — nuts, spices, vegetables & dehydrated vegetables." />
 
@@ -20,21 +20,19 @@
   <!-- HERO -->
   <header class="hero">
     <img class="heroLogo" src="assets/Logos/green_logo.png" alt="Nine AM Foods logo" />
-    <h1 class="heroName">NINE AM Foods Pvt. Ltd.</h1>
+    <h1 data-aos="fade-up" data-aos-delay="200" class="heroName">NINE AM Foods Pvt. Ltd.</h1>
     <p class="heroTagline">eat better, live better</p>
   </header>
 
   <main class="wrap">
     <div class="card">
-
-      <!-- STICKY NAV -->
       <div class="cardHeader">
         <nav class="pills" aria-label="Section navigation">
-          <a class="pill active" href="#intro">Introduction</a>
-          <a class="pill" href="#nuts">Nuts</a>
-          <a class="pill" href="#spices">Spices</a>
-          <a class="pill" href="#vegetables">Vegetables</a>
-          <a class="pill" href="#dehydrated">Dehydrated</a>
+          <a data-aos="zoom-in" data-aos-delay="400"  class="pill active"  href="#intro">Introduction</a>
+          <a data-aos="zoom-in" data-aos-delay="600" class="pill" href="#nuts">Nuts</a>
+          <a data-aos="zoom-in" data-aos-delay="800" class="pill" href="#spices">Spices</a>
+          <a data-aos="zoom-in" data-aos-delay="900" class="pill" href="#vegetables">Vegetables</a>
+          <a data-aos="zoom-in" data-aos-delay="1000" class="pill" href="#dehydrated">Dehydrated</a>
         </nav>
       </div>
       
@@ -150,7 +148,17 @@
 </footer>
 
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      AOS.init({
+        once: true,         
+        duration: 1200,      
+        easing: 'ease-out-cubic',
+        offset: 120        
+      });
+    });
+  </script>
 <script src="js/script.js"></script>
 
 </body>
