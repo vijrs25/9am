@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title >Nine AM Foods Pvt. Ltd.</title>
+  <title>Nine AM Foods Pvt. Ltd.</title>
   <link rel="icon" type="image/png" href="assets/Logos/titleLogo.png" />
   <meta name="description" content="Nine AM Foods — nuts, spices, vegetables & dehydrated vegetables." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Delius&family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/LandingStyle.css" />
-
 </head>
 <body>
 
   <!-- HERO -->
   <header class="hero">
+    <!-- 🚫 No lazy loading here -->
     <img class="heroLogo" src="assets/Logos/mainLogo.webp" alt="Nine AM Foods logo" />
     <h1 data-aos="fade-up" data-aos-delay="200" class="heroName">NINE AM Foods Pvt. Ltd.</h1>
     <p class="heroTagline">eat better, live better</p>
@@ -28,7 +28,7 @@
     <div class="card">
       <div class="cardHeader">
         <nav class="pills" aria-label="Section navigation">
-          <a data-aos="zoom-in" data-aos-delay="400"  class="pill active"  href="#intro">Introduction</a>
+          <a data-aos="zoom-in" data-aos-delay="400" class="pill active" href="#intro">Introduction</a>
           <a data-aos="zoom-in" data-aos-delay="600" class="pill" href="#nuts">Nuts</a>
           <a data-aos="zoom-in" data-aos-delay="800" class="pill" href="#spices">Spices</a>
           <a data-aos="zoom-in" data-aos-delay="900" class="pill" href="#vegetables">Vegetables</a>
@@ -36,17 +36,14 @@
         </nav>
       </div>
       
-      
       <!-- INTRO -->
       <section class="section" id="intro">
         <h3>Introduction</h3>
         <div class="pane introPane">
           <div class="introInner">
             <div class="introBody">
-              <p class="lead"><strong>NINE AM Foods Pvt. Ltd.</strong> is a Mumbai-based company dedicated to delivering high-quality, natural, and nutritious food products to customers across the globe.
-</p>
-              <p>Our wide range of offerings includes premium nuts, aromatic spices, onion, garlic, chillies, and dehydrated vegetables – all carefully sourced, processed under strict quality standards, and packaged to preserve their freshness and flavor.
-</p>
+              <p class="lead"><strong>NINE AM Foods Pvt. Ltd.</strong> is a Mumbai-based company dedicated to delivering high-quality, natural, and nutritious food products to customers across the globe.</p>
+              <p>Our wide range of offerings includes premium nuts, aromatic spices, onion, garlic, chillies, and dehydrated vegetables – all carefully sourced, processed under strict quality standards, and packaged to preserve their freshness and flavor.</p>
               <p>Whether it’s everyday cooking, healthy snacking, private label or large-scale distribution, our products are trusted by households, retailers and businesses alike.</p>
               <p class="promise"><strong>Our promise:</strong> purity, authenticity and innovation—making healthy living simpler and tastier. As we expand into retail, wholesale and exports, we remain focused on delivering foods that are honest, wholesome and reliable.</p>
             </div>
@@ -68,59 +65,58 @@
         <h3>Nuts</h3>
         <div class="pane">
           <div class="category-grid">
-            <a class="category-item" href="#nuts"><img src="assets\dryfruits\Almonds.webp" alt="Almonds"><div>Almonds</div></a>
-            <a class="category-item" href="#nuts"><img src="assets\dryfruits\Cashews.webp" alt="Cashews"><div>Cashews</div></a>
-            <a class="category-item" href="#nuts"><img src="assets\dryfruits\raisins.webp" alt="Raisins"><div>Raisins</div></a>
-            <a class="category-item" href="#nuts"><img src="assets\dryfruits\foxnuts.webp" alt="Foxnuts"><div>Foxnuts</div></a>
-            <a class="category-item" href="#nuts"><img src="assets\dryfruits\walnuts.webp" alt="Walnuts"><div>Walnuts</div></a>
-            <a class="category-item" href="#nuts"><img src="assets\dryfruits\Pistachios.webp" alt="Pistachios"><div>Pistachios</div></a>
-            <a class="category-item" href="#nuts"><img src="assets\dryfruits\figs.webp" alt="Figs"><div>Figs</div></a>
+            <a class="category-item" href="#nuts"><img src="assets/dryfruits/Almonds.webp" alt="Almonds" loading="lazy"><div>Almonds</div></a>
+            <a class="category-item" href="#nuts"><img src="assets/dryfruits/Cashews.webp" alt="Cashews" loading="lazy"><div>Cashews</div></a>
+            <a class="category-item" href="#nuts"><img src="assets/dryfruits/raisins.webp" alt="Raisins" loading="lazy"><div>Raisins</div></a>
+            <a class="category-item" href="#nuts"><img src="assets/dryfruits/foxnuts.webp" alt="Foxnuts" loading="lazy"><div>Foxnuts</div></a>
+            <a class="category-item" href="#nuts"><img src="assets/dryfruits/walnuts.webp" alt="Walnuts" loading="lazy"><div>Walnuts</div></a>
+            <a class="category-item" href="#nuts"><img src="assets/dryfruits/Pistachios.webp" alt="Pistachios" loading="lazy"><div>Pistachios</div></a>
+            <a class="category-item" href="#nuts"><img src="assets/dryfruits/figs.webp" alt="Figs" loading="lazy"><div>Figs</div></a>
           </div>
         </div>
       </section>
 
       <!-- SPICES -->
-     <section class="section" id="spices">
-  <h3>Spices</h3>
-  <div class="pane">
-    <div class="category-grid">
-      <a class="category-item" href="#spices"><img src="assets\spices\seeds.webp" alt="Cumin"><div>Cumin</div></a>
-      <a class="category-item" href="#spices"><img src="assets\spices\Coriander.webp" alt="Coriander"><div>Coriander</div></a>
-      <a class="category-item" href="#spices"><img src="assets\spices\fennel.webp" alt="Fennel"><div>Fennel</div></a>
-      <a class="category-item" href="#spices"><img src="assets\spices\cardemon.webp" alt="Cardamom"><div>Cardamom</div></a>
-      <a class="category-item" href="#spices"><img src="assets\spices\sinemon.jpeg" alt="Cinnamon"><div>Cinnamon</div></a>
-      <a class="category-item" href="#spices"><img src="assets\spices\Turmeric.webp" alt="Termeric powder"><div>Termeric powder </div></a>
-      <a class="category-item" href="#spices"><img src="assets\spices\Moringa.webp" alt="Moringa powder"><div>Moringa powder</div></a>
-      <a class="category-item" href="#spices"><img src="assets\spices\pepper.webp" alt="Pepper/Chilli"><div>Pepper</div></a>
-      <a class="category-item" href="#spices"><img src="assets\spices\cloves.webp" alt="Cloves"><div>Cloves</div></a>
-      <a class="category-item" href="#spices"><img src="assets\spices\bayLeaves.webp" alt="Bay Leaves"><div>Bay Leaves</div></a>
+      <section class="section" id="spices">
+        <h3>Spices</h3>
+        <div class="pane">
+          <div class="category-grid">
+            <a class="category-item" href="#spices"><img src="assets/spices/seeds.webp" alt="Cumin" loading="lazy"><div>Cumin</div></a>
+            <a class="category-item" href="#spices"><img src="assets/spices/Coriander.webp" alt="Coriander" loading="lazy"><div>Coriander</div></a>
+            <a class="category-item" href="#spices"><img src="assets/spices/fennel.webp" alt="Fennel" loading="lazy"><div>Fennel</div></a>
+            <a class="category-item" href="#spices"><img src="assets/spices/cardemon.webp" alt="Cardamom" loading="lazy"><div>Cardamom</div></a>
+            <a class="category-item" href="#spices"><img src="assets/spices/sinemon.jpeg" alt="Cinnamon" loading="lazy"><div>Cinnamon</div></a>
+            <a class="category-item" href="#spices"><img src="assets/spices/Turmeric.webp" alt="Termeric powder" loading="lazy"><div>Termeric powder</div></a>
+            <a class="category-item" href="#spices"><img src="assets/spices/Moringa.webp" alt="Moringa powder" loading="lazy"><div>Moringa powder</div></a>
+            <a class="category-item" href="#spices"><img src="assets/spices/pepper.webp" alt="Pepper/Chilli" loading="lazy"><div>Pepper</div></a>
+            <a class="category-item" href="#spices"><img src="assets/spices/cloves.webp" alt="Cloves" loading="lazy"><div>Cloves</div></a>
+            <a class="category-item" href="#spices"><img src="assets/spices/bayLeaves.webp" alt="Bay Leaves" loading="lazy"><div>Bay Leaves</div></a>
+          </div>
+        </div>
+      </section>
 
-    </div>
-  </div>
-</section>
-
-<!-- VEGETABLES -->
-<section class="section" id="vegetables">
-  <h3>Vegetables</h3>
-  <div class="pane">
-    <div class="category-grid">
-      <a class="category-item" href="#vegetables"><img src="assets\vegetable\onion.jpg" alt="Onion"><div>Onion</div></a>
-      <a class="category-item" href="#vegetables"><img src="assets\vegetable\coconut.webp" alt="Coconut"><div>Coconut</div></a>
-      <a class="category-item" href="#vegetables"><img src="assets\vegetable\garlic.webp" alt="Garlic"><div>Garlic</div></a>
-      <a class="category-item" href="#vegetables"><img src="assets\vegetable\chillies.webp" alt="Green Chillies"><div>Green Chillies</div></a>
-    </div>
-  </div>
-</section>
+      <!-- VEGETABLES -->
+      <section class="section" id="vegetables">
+        <h3>Vegetables</h3>
+        <div class="pane">
+          <div class="category-grid">
+            <a class="category-item" href="#vegetables"><img src="assets/vegetable/onion.jpg" alt="Onion" loading="lazy"><div>Onion</div></a>
+            <a class="category-item" href="#vegetables"><img src="assets/vegetable/coconut.webp" alt="Coconut" loading="lazy"><div>Coconut</div></a>
+            <a class="category-item" href="#vegetables"><img src="assets/vegetable/garlic.webp" alt="Garlic" loading="lazy"><div>Garlic</div></a>
+            <a class="category-item" href="#vegetables"><img src="assets/vegetable/chillies.webp" alt="Green Chillies" loading="lazy"><div>Green Chillies</div></a>
+          </div>
+        </div>
+      </section>
 
       <!-- DEHYDRATED -->
       <section class="section" id="dehydrated">
         <h3>Dehydrated Vegetables</h3>
-          <div class="pane">
-    <div class="category-grid">
-      <a class="category-item" href="#dehydrated"><img src="assets\powder\Powdered_onion.webp" alt="Powdered Onion"><div>Powdered Onion</div></a>
-      <a class="category-item" href="#dehydrated"><img src="assets\powder\powder.webp" alt="Powdered Garlic"><div>Powdered Garlic</div></a>
-    </div>
-  </div>
+        <div class="pane">
+          <div class="category-grid">
+            <a class="category-item" href="#dehydrated"><img src="assets/powder/Powdered_onion.webp" alt="Powdered Onion" loading="lazy"><div>Powdered Onion</div></a>
+            <a class="category-item" href="#dehydrated"><img src="assets/powder/powder.webp" alt="Powdered Garlic" loading="lazy"><div>Powdered Garlic</div></a>
+          </div>
+        </div>
       </section>
     </div>
 
@@ -133,7 +129,6 @@
             <div class="accent" aria-hidden="true"></div>
             <div class="contactDetails">
               <div class="address">Ambika Nagar, Dombivli (West) – 421202</div>
-              <!-- <a href="tel:+919326441736">+91 93264 41736</a> -->
               <a href="mailto:info@nineamfoods.com">info@nineamfoods.com</a>
             </div>
           </div>
@@ -148,23 +143,22 @@
     </section>
   </main>
 
-<footer class="copyright">
-  © <span id="year"></span> Nine AM Foods Pvt. Ltd. All rights reserved. | Developed by Arnease
-</footer>
+  <footer class="copyright">
+    © <span id="year"></span> Nine AM Foods Pvt. Ltd. All rights reserved. | Developed by Arnease
+  </footer>
 
-
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     window.addEventListener('load', () => {
       AOS.init({
-        once: true,         
-        duration: 1200,      
+        once: true,
+        duration: 1200,
         easing: 'ease-out-cubic',
-        offset: 120        
+        offset: 120
       });
     });
   </script>
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
